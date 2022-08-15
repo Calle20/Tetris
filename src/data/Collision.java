@@ -200,7 +200,9 @@ public class Collision {
 		}
 
 		Game.score += Game.scoreToAdd;
+		CheckSpeed();
 		Game.scoreToAdd = 0;
+		
 
 		if (Game.score > Game.highscore) {
 			Game.highscore = Game.score;
@@ -232,5 +234,12 @@ public class Collision {
 
 		}
 	}
-
+	
+	private static void CheckSpeed() {
+		Game.pointsAdded=Game.pointsAdded+Game.scoreToAdd;
+		if(Game.pointsAdded>=100) {
+			Game.pointsAdded=0;
+			Game.sleeptime=Game.sleeptime-20;
+		}
+	}
 }

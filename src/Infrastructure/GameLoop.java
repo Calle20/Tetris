@@ -30,7 +30,7 @@ public class GameLoop extends Thread{
 					}
 				}
 				if (!Game.speedup) {
-					sleep(1000);
+					sleep(Game.sleeptime);
 				} else {
 					sleep(100);
 				}

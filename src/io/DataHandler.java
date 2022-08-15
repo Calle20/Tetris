@@ -11,7 +11,7 @@ import game.Game;
 
 public class DataHandler {
 	public static void Load() {
-		File file = new File("rsc/save.txt");
+		File file = new File("rsc/Data/save.txt");
 		
 		try {
 			Scanner sc = new Scanner(file);
@@ -24,7 +24,7 @@ public class DataHandler {
 	}
 	
 	public static void Save() {
-		File file = new File("rsc/save.txt");
+		File file = new File("rsc/Data/save.txt");
 		
 		try {
 			OutputStream stream=new FileOutputStream(file);
